@@ -1,0 +1,125 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: radial-gradient(#ffffff, #DDB274);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0;
+}
+nav {
+    display: inline-block;
+    width:100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-image: radial-gradient(#ffffff, #A9844B);
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #A9844B;
+}
+nav a{
+    display:inherit;
+    padding: 20px;
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    color: #82343B;
+}
+nav a:hover{
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+h1 {
+    color: #82343B;
+    font-size: 32px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+h2 {
+    color: #82343B;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitulo {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.tarjeta {
+    background: #ffffff;
+    width: 20%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: left;
+}
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+.grupo-formulario label {
+    display: block;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.contenedor-entrada {
+    position: relative;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px;
+}
+.contenedor-entrada input {
+    border: none;
+    outline: none;
+    width: 80%;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.opciones-extra {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.recordar {
+    float: left;
+    font-size: 13px;
+    color: #666;
+}
+.olvido {
+    float: right;
+    font-size: 13px;
+}
+.olvido a {
+    color: #82343B;
+    text-decoration: none;
+}
+button {
+    display: block;
+    width: 100%;
+    background-color: #82343B;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+button:hover {
+    background-color: #61272c;
+}
+main button{
+    margin-top:50px;
+}
+#okPagina{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
