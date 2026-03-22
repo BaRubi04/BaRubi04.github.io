@@ -16,18 +16,22 @@
         <a href="#">Recibir</a>
         <a href="#">Cerrar Sesión</a>
     </nav>
-    <div>
+    <main>
         <div class="tarjeta">
             <form action="okformulario.php" method="POST">
                 <div class="grupo-formulario">
                     <label>para</label>
                     <div class="contenedor-entrada">
                         <select>
-                            <!-- <interrogacion php
-                <option value="'valor_campo'" name="'nombre_campo'">.nombre_jesuita.</option>;
-                             interrogacion>      -->  
-
-            <!-- En value va el valor del campo, en name el nombre del campo y lo que se visualiza en navegador es el jesuita correspondiente  -->
+                             <?php
+                                include "operaciones.php";
+                                $conexion=conectar();
+                                $sql = "select * from alumnos;";
+                                $resultado=$conexion->query($sql);
+                                    while($fila=$resultado->fetch_array())
+                                        echo '<option value="'.$fila["idAlumno"].'" name="'.$fila["nombreAlumno"].'">'.$fila["nombreJesuita"].'</option>';                                    
+                                $conexion->close(); 
+                             ?>      
                         </select>
                     </div>
                 </div>
@@ -42,6 +46,6 @@
                 <button type="submit" class="boton">ENVIAR</button>
             </form>
         </div>
-    </div>
+    </main>
 </body>
 </html>
