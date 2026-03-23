@@ -13,12 +13,15 @@
 <body>
     <header>
         <h1>AGRADECE EN COMPAÑÍA</h1>
+        <p class="subtitulo">Comparte gratitud y fortalece la comunidad</p>
     </header>
+
     <nav>
-        <a href="#">Agradecer</a>
+        <a href="agradecer.php">Agradecer</a>
         <a href="veragradecimientos.php">Recibir</a>
-        <a href="#">Cerrar Sesión</a>
+        <a href="inicio.php">Cerrar Sesión</a>
     </nav>
+
     <main>
         <div class="tarjeta">
             <form action="okformulario.php" method="POST">
@@ -26,9 +29,9 @@
                     <label>para</label>
                     <div class="contenedor-entrada">
                         <select>
-                             <?php
+                            <?php
                                 consultar();
-                             ?>      
+                            ?>      
                         </select>
                     </div>
                 </div>

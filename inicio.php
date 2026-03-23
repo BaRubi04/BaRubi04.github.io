@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +9,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" author="Rubí">
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>Inicio</title>
+    <title>AGRADECE EN COMPAÑÍA</title>
 </head>
 <body>
     <header>
         <h1>AGRADECE EN COMPAÑÍA</h1>
         <p class="subtitulo">Comparte gratitud y fortalece la comunidad</p>
     </header>
+
+    <nav>
+        <a href="agradecer.php">Agradecer</a>
+        <a href="veragradecimientos.php">Recibir</a>
+        <a href="inicio.php">Cerrar Sesión</a>
+    </nav>
+
     <main>
         <div class="tarjeta">
             <h2>Inicia sesión para continuar</h2>
-            <form action="iniciodesesion.php">
+            <form action="trassesion.php" method="POST">
                 <div class="grupo-formulario">
                     <label>Correo electrónico</label>
                     <div class="contenedor-entrada">
