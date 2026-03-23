@@ -1,4 +1,4 @@
 <?php 
     include 'operaciones.php';
-    consultar();
+    mostrar_alumnos();
 ?>
