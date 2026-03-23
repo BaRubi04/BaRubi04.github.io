@@ -1,0 +1,70 @@
+-- --------------------------------------------------------
+-- Host:                         24.1daw.esvirgua.com
+-- Versión del servidor:         8.0.45 - MySQL Community Server - GPL
+-- SO del servidor:              Linux
+-- HeidiSQL Versión:             12.12.0.7122
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+-- Volcando estructura de base de datos para user1daw_BD1-24
+CREATE DATABASE IF NOT EXISTS `user1daw_BD1-24` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `user1daw_BD1-24`;
+
+-- Volcando estructura para tabla user1daw_BD1-24.agradecimientos
+CREATE TABLE IF NOT EXISTS `agradecimientos` (
+  `idAgradecimiento` smallint unsigned NOT NULL,
+  `emisor` char(2) NOT NULL,
+  `receptor` char(2) NOT NULL,
+  `mensaje` varchar(300) NOT NULL,
+  PRIMARY KEY (`idAgradecimiento`),
+  KEY `FK1_receptor` (`receptor`),
+  KEY `FK_emisor` (`emisor`),
+  CONSTRAINT `FK1_receptor` FOREIGN KEY (`receptor`) REFERENCES `alumnos` (`idAlumno`),
+  CONSTRAINT `FK_emisor` FOREIGN KEY (`emisor`) REFERENCES `alumnos` (`idAlumno`),
+  CONSTRAINT `CK_no_igual` CHECK ((`receptor` <> `emisor`))
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla user1daw_BD1-24.agradecimientos: ~0 rows (aproximadamente)
+
+-- Volcando estructura para tabla user1daw_BD1-24.alumnos
+CREATE TABLE IF NOT EXISTS `alumnos` (
+  `idAlumno` char(2) NOT NULL,
+  `nombreAlumno` varchar(100) NOT NULL,
+  `correo` varchar(80) DEFAULT NULL,
+  `pw` varchar(20) NOT NULL,
+  `idJesuita` tinyint unsigned NOT NULL,
+  `nombreJesuita` varchar(100) NOT NULL,
+  `fotoperfil` blob NOT NULL,
+  `frase` varchar(300) NOT NULL,
+  PRIMARY KEY (`idAlumno`),
+  UNIQUE KEY `idJesuita` (`idJesuita`),
+  UNIQUE KEY `correo` (`correo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla user1daw_BD1-24.alumnos: ~10 rows (aproximadamente)
+INSERT INTO `alumnos` (`idAlumno`, `nombreAlumno`, `correo`, `pw`, `idJesuita`, `nombreJesuita`, `fotoperfil`, `frase`) VALUES
+	('00', 'Juan Pérez', 'juan.perez@email.com', 'Pass123!', 1, 'Ignacio de Loyola', _binary 0x3030, 'En todo amar y servir.'),
+	('01', 'María García', 'maria.garcia@email.com', 'Secur3_99', 2, 'Francisco Javier', _binary 0x3030, 'Id, inflamad el mundo.'),
+	('02', 'Carlos Ruiz', 'carlos.ruiz@email.com', 'Alfa_2024', 3, 'Pedro Arrupe', _binary 0x3030, 'No me resigno a que el mundo sea así.'),
+	('03', 'Ana Belén', 'ana.belen@email.com', 'Beta_777', 4, 'Alberto Hurtado', _binary 0x3030, 'Dar hasta que duela.'),
+	('04', 'Luis Miguel', 'luis.mi@email.com', 'Gama_888', 5, 'Matteo Ricci', _binary 0x3030, 'La amistad es una sola alma en dos cuerpos.'),
+	('05', 'Elena Sanz', 'elena.sanz@email.com', 'Delta_111', 6, 'Baltasar Gracián', _binary 0x3030, 'Lo bueno, si breve, dos veces bueno.'),
+	('06', 'Jorge Sanz', 'jorge.s@email.com', 'Epsilon_2', 7, 'José de Anchieta', _binary 0x3030, 'Para Dios no hay imposibles.'),
+	('07', 'Sofía Lara', 'sofia.lara@email.com', 'Zeta_333', 8, 'San Estanislao', _binary 0x3030, 'Nací para cosas mayores.'),
+	('08', 'Pablo Motos', 'pablo.m@email.com', 'Eta_444', 9, 'San Luis Gonzaga', _binary 0x3030, 'Es mejor ser hijo de Dios que dueño del mundo.'),
+	('09', 'Lucía Gil', 'lucia.gil@email.com', 'Theta_555', 10, 'San Francisco de Borja', _binary 0x3030, 'No servas más a señor que se te pueda morir.');
+
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
