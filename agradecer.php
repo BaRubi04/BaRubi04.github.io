@@ -1,3 +1,6 @@
+<?php 
+    include 'operaciones.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,7 +16,7 @@
     </header>
     <nav>
         <a href="#">Agradecer</a>
-        <a href="#">Recibir</a>
+        <a href="veragradecimientos.php">Recibir</a>
         <a href="#">Cerrar Sesión</a>
     </nav>
     <main>
@@ -24,13 +27,7 @@
                     <div class="contenedor-entrada">
                         <select>
                              <?php
-                                include "operaciones.php";
-                                $conexion=conectar();
-                                $sql = "select * from alumnos;";
-                                $resultado=$conexion->query($sql);
-                                    while($fila=$resultado->fetch_array())
-                                        echo '<option value="'.$fila["idAlumno"].'" name="'.$fila["nombreAlumno"].'">'.$fila["nombreJesuita"].'</option>';                                    
-                                $conexion->close(); 
+                                consultar();
                              ?>      
                         </select>
                     </div>
