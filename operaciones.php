@@ -7,15 +7,15 @@
     }
 
     function mostrar_alumnos(){ 
-	$conexion=conectar();  
-	$sql="select * from alumnos;";
-	$resultado=$conexion->query($sql);	
-	while($fila=$resultado->fetch_array())
-	   echo '<p>';
-	   echo 'Nombre alumno: '.$fila["nombreAlumno"]; 
-	   echo '</p>';
+        $conexion=conectar();  
+        $sql="select * from alumnos;";
+        $resultado=$conexion->query($sql);	
+        while($fila=$resultado->fetch_array()){
+            echo '<p>';
+            echo 'Nombre alumno: '.$fila["nombreAlumno"]; 
+            echo '</p>';
+        }
     }
-
     function consultar(){
         $conexion=conectar();
         $sql = "select * from alumnos;";
