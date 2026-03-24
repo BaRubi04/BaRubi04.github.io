@@ -113,11 +113,15 @@ button {
 }
 button:hover {
     background-color: #61272c;
+    cursor: pointer;
 }
 main button{
     margin-top:50px;
 }
-#okPagina{
+.paginaActual{
+    background-color: #ffffff81;
+}
+.cajitaCentrada{
     position:absolute;
     top: 50%;
     left: 50%;

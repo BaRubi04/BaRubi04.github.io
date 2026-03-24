@@ -1,7 +1,3 @@
-<?php 
-    session_start();
-    session_destroy();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +12,10 @@
         <h1>AGRADECE EN COMPAÑÍA</h1>
         <p class="subtitulo">Comparte gratitud y fortalece la comunidad</p>
     </header>
-
-    <nav>
-        <a href="agradecer.php">Agradecer</a>
-        <a href="veragradecimientos.php">Recibir</a>
-        <a href="inicio.php">Cerrar Sesión</a>
-    </nav>
-
     <main>
-        <div class="tarjeta">
+        <div class="tarjeta cajitaCentrada">
             <h2>Inicia sesión para continuar</h2>
-            <form action="trassesion.php" method="POST">
+            <form action="recogerDatosInicioSesion.php" method="POST">
                 <div class="grupo-formulario">
                     <label>Correo electrónico</label>
                     <div class="contenedor-entrada">

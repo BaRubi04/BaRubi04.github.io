@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'operaciones.php';
+    include 'funcionesBDD.php';
     $conexion=conectar();
 
     //pilla las variables
@@ -25,13 +25,14 @@
         echo '<div class="tarjeta">';
         echo '<h1>Inicio de sesión correcto</h1><br>';
         echo '<h2>Bienvenid@: '.$_SESSION["nombre"].'</h2>';
+        echo '<a href="veragradecimientos.php"><button class="boton">ACCEDER</button></a>';
     }
     else{//si no existe
         echo 'Inicio de sesión catastrófico';
+        echo '<a href="index.html"><button class="boton">REGRESAR</button></a>';
     }
     $conexion->close();
 
-    echo '<a href="veragradecimientos.php"><button class="boton">ACCEDER</button></a>';
     echo '</div>';
 ?>
 <!DOCTYPE html>

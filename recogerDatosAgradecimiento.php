@@ -1,3 +1,21 @@
+<?php 
+    //session_start();
+    include 'funcionesBDD.php';
+    $conexion=conectar();
+
+    $emisor=$_SESSION["id"];
+    $receptor=$_POST["nombreJesuita"];//El nombre del select, coge el value del idAlumno seleccionado
+    $mensaje=$_POST["mensaje"];
+
+    $sql='INSERT INTO agradecimientos(emisor,receptor,mensaje) VALUES
+                ("'.$emisor.'","'.$receptor.'","'.$mensaje.'");';
+
+    echo '<br/><p><b>'.$sql.'</b></p><br/>';
+    if($conexion->query($sql))
+        $estado='Agradecimiento enviado correctamente.';
+    else
+        $estado='Ya agradeciste a este jesuita, elige otro.';//Aún no sale cuando da error.
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,9 +26,9 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <main class="tarjeta" id="okPagina">
-        <h1>Formulario enviado correctamente</h1>
-        <a href="veragradecimientos.php"><button class="boton">Regresar</button></a>
+    <main class="tarjeta cajitaCentrada">
+        <h1><?php echo $estado; ?></h1>
+        <a href="agradecer.php"><button class="boton">Regresar</button></a>
     </main>
 </body>
 </html>

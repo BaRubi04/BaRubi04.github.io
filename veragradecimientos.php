@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +18,8 @@
 
     <nav>
         <a href="agradecer.php">Agradecer</a>
-        <a href="veragradecimientos.php">Recibir</a>
-        <a href="inicio.php">Cerrar Sesión</a>
+        <a href="veragradecimientos.php" class="paginaActual">Recibir</a>
+        <a href="destruirsesion.php">Cerrar Sesión</a>
     </nav>
 
     <main>

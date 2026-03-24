@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include "configdb.php";
     function conectar(){
         $conexion = new mysqli(SERVIDOR, USUARIO, PASSWORD, BBDD);
@@ -16,12 +17,23 @@
             echo '</p>';
         }
     }
-    function consultar(){
+
+    function listado_jesuitas(){
         $conexion=conectar();
-        $sql = "select * from alumnos;";
+        $sql = "select idAlumno,nombreJesuita from alumnos;";
         $resultado=$conexion->query($sql);
         while($fila=$resultado->fetch_array())
-            echo '<option value="'.$fila["idAlumno"].'" name="'.$fila["nombreAlumno"].'">'.$fila["nombreJesuita"].'</option>';                                    
+            if($_SESSION["id"]!=$fila["idAlumno"])
+                echo '<option value="'.$fila["idAlumno"].'">'.$fila["nombreJesuita"].'</option>';                                    
         $conexion->close(); 
+    }
+
+    function sacar_id(){ 
+        $conexion=conectar();  
+        $sql="select * from alumnos;";
+        $resultado=$conexion->query($sql);	
+        while($fila=$resultado->fetch_array()){
+            return ;
+        }
     }
  ?>

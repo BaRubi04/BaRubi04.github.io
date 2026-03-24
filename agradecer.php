@@ -1,5 +1,6 @@
 <?php 
-    include 'operaciones.php';
+    //session_start();
+    include 'funcionesBDD.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,29 +18,32 @@
     </header>
 
     <nav>
-        <a href="agradecer.php">Agradecer</a>
+        <a href="agradecer.php" class="paginaActual">Agradecer</a>
         <a href="veragradecimientos.php">Recibir</a>
-        <a href="inicio.php">Cerrar Sesión</a>
+        <a href="destruirsesion.php">Cerrar Sesión</a>
     </nav>
 
     <main>
         <div class="tarjeta">
-            <form action="okformulario.php" method="POST">
+            <form action="recogerDatosAgradecimiento.php" method="POST">
                 <div class="grupo-formulario">
-                    <label>para</label>
+                    <label>De: <b><u><?php echo $_SESSION['nombre']; ?></u></b> </label> 
+                </div>
+                <div class="grupo-formulario">
+                    <label>A:</label>
                     <div class="contenedor-entrada">
-                        <select>
+                        <select name="nombreJesuita">
                             <?php
-                                consultar();
+                                listado_jesuitas();
                             ?>      
                         </select>
                     </div>
                 </div>
 
                 <div class="grupo-formulario">
-                    <label>quiero agradecerte</label>
+                    <label>Quiero agradecerte:</label>
                     <div class="contenedor-entrada">
-                        <input placeholder="Escribe aquí tu agradecimiento..."></input>
+                        <input placeholder="Escribe aquí tu agradecimiento..." name="mensaje"></input>
                     </div>
                 </div>
 
