@@ -21,7 +21,7 @@ USE `user1daw_BD1-24`;
 
 -- Volcando estructura para tabla user1daw_BD1-24.agradecimientos
 CREATE TABLE IF NOT EXISTS `agradecimientos` (
-  `idAgradecimiento` smallint unsigned NOT NULL,
+  `idAgradecimiento` smallint unsigned AUTO_INCREMENT NOT NULL,
   `emisor` char(2) NOT NULL,
   `receptor` char(2) NOT NULL,
   `mensaje` varchar(300) NOT NULL,
