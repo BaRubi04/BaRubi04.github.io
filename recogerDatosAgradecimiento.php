@@ -28,7 +28,7 @@
 <body>
     <main class="tarjeta cajitaCentrada">
         <h1><?php echo $estado; ?></h1>
-        <a href="agradecer.php"><button class="boton">Regresar</button></a>
+        <a href="index.php"><button class="boton">Regresar</button></a>
     </main>
 </body>
 </html>

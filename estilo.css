@@ -1,11 +1,20 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: radial-gradient(#ffffff, #DDB274);
+    background-image: url('imagenes/fondomoderno.jpg');
+    background-color: #a79271;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
     text-align: center;
-    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    padding-top: 40px;
 }
 nav {
     display: inline-block;
@@ -34,70 +43,15 @@ nav a:hover{
 }
 h1 {
     color: #82343B;
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 5px;
     font-weight: bold;
 }
 h2 {
     color: #82343B;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 30px;
-}
-
-.subtitulo {
-    color: #666;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.tarjeta {
-    background: #ffffff;
-    width: 20%;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    text-align: left;
-}
-.grupo-formulario {
-    margin-bottom: 20px;
-}
-.grupo-formulario label {
-    display: block;
-    font-size: 13px;
-    color: #444;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-.contenedor-entrada {
-    position: relative;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    padding: 10px;
-}
-.contenedor-entrada input {
-    border: none;
-    outline: none;
-    width: 80%;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-}
-.opciones-extra {
-    margin-bottom: 30px;
-    overflow: hidden;
-}
-.recordar {
-    float: left;
-    font-size: 13px;
-    color: #666;
-}
-.olvido {
-    float: right;
-    font-size: 13px;
-}
-.olvido a {
-    color: #82343B;
-    text-decoration: none;
 }
 button {
     display: block;
@@ -118,6 +72,68 @@ button:hover {
 main button{
     margin-top:50px;
 }
+.grupo-formulario label {
+    display: block;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.contenedor-entrada input {
+    border: none;
+    outline: none;
+    width: 80%;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.olvido a {
+    color: #82343B;
+    text-decoration: none;
+}
+.olvido {
+    float: right;
+    font-size: 13px;
+}
+.comillasGrandes{
+    font-size: 60px;
+    font-weight: bolder;
+    margin: 0;
+}
+.letrasGrandes {
+    color: #82343B;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.tarjeta {
+    background: #ffffff;
+    width: 20%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px #461c20b3;
+    text-align: left;
+}
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.contenedor-entrada {
+    position: relative;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.opciones-extra {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.recordar {
+    float: left;
+    font-size: 13px;
+    color: #666;
+}
 .paginaActual{
     background-color: #ffffff81;
 }
@@ -127,7 +143,34 @@ main button{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#cajaAgradecimientoEnDetalle {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 40px;
+    width: 45%;
+    vertical-align: top;
+}
+#tarjetaImagenJesuita{
+    width: 38%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin:0px;
+    float:left;
+}
+#tarjetaMensajeJesuita{
+    float:right;
+    font-size: 40px;
+    width: 48%;
+}
+#imgJesuitaEjemplo{
+    width:100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 #logoGrande{
     width: 25%;
     margin-top: 30px;
+}
+#comillaFlotarDerecha{
+    float:right;
 }

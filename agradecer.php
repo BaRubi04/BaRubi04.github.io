@@ -14,7 +14,7 @@
 <body>
     <header>
         <h1>AGRADECE EN COMPAÑÍA</h1>
-        <p class="subtitulo">Comparte gratitud y fortalece la comunidad</p>
+        <h2>Comparte gratitud y fortalece la comunidad</h2>
     </header>
 
     <nav>

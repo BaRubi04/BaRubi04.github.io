@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1>AGRADECE EN COMPAÑÍA</h1>
-        <p class="subtitulo">Comparte gratitud y fortalece la comunidad</p>
+        <h2>Comparte gratitud y fortalece la comunidad</h2>
     </header>
 
     <nav>
@@ -24,8 +24,30 @@
 
     <main>
         <p>
-            <b> Sesión: <?php echo $_SESSION["nombre"]; ?> </b>
+            <h2><b> Para <?php echo $_SESSION["nombre"]; ?> </b></h2>
         </p>
+        <div id="cajaAgradecimientoEnDetalle">
+            <div class="tarjeta" id="tarjetaImagenJesuita">
+                <img src="imagenes/jesuitaEjemplo.png" id="imgJesuitaEjemplo">
+                <h2>
+                    Mateo Ricci: 
+                </h2>
+                <p class="letrasGrandes">
+                    "Aunque el amigo y yo tenemos dos cuerpos, en esos dos cuerpos hay un solo corazón."
+                </p>
+            </div>
+            <div class="tarjeta" id="tarjetaMensajeJesuita">
+                <!--<p class="comillasGrandes">“</p>
+                <p>
+                    Eres una inspiración para todos, ¡tus palabras conmueven a millones!.
+                </p>
+                <p class="comillasGrandes" id="comillaFlotarDerecha">”</p> -->
+                <h1>
+                    “ Eres una inspiración para todos, ¡tus palabras conmueven a millones! ”
+                </h1>
+            </div>
+        </div>
+        
     </main>
 </body>
 </html>
