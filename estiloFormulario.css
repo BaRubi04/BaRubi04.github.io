@@ -1,26 +1,32 @@
+html{
+    width:1000px;
+    background-color: blue;
+}
 body{
+    width: 900px;/* 900px de 1000px */
+    margin: 0 auto;
     background-color: rgb(255, 250, 243);
 }
 
 h1{
-    margin: 50px 0 0 250px;
+    margin: 20px 0 0 250px;/* 250px de 900px(body) */
 }
 
 form{
-    width: 400px;
+    width: 400px;/* 400px de 900px(body) */
     border: 4px solid rgb(220, 198, 169);
     border-radius: 15px;
     background-color: antiquewhite;
-    margin: 50px 0 0 200px;
-    padding: 20px;
+    margin: 50px 0 0 200px;/* 200px(izquierda) de body(900px) */
+    padding: 20px;/* 20px de 900px(body) */
     font-family: Arial, Helvetica, sans-serif;
 }
 
-div{
+div{/* Ancho: 295px (400form -20margin -50padding -15margin -20margin) */
     border-radius: 10px;
     background-color: rgb(255, 250, 244);
-    padding: 15px 15px 15px 50px;
-    margin: 30px 20px 20px 20px;
+    padding: 1em 15px 1em 50px;/* 15px y 50px de 400px(form) */
+    margin: 30px 20px 20px 20px;/* 20px de 400px(form) */
 }
 
 label{
@@ -30,13 +36,13 @@ label{
 textarea, input[type^="text"]{
     border-radius: 10px;
     border-color: rgb(220, 198, 169);
-    padding: 7px;
-    width: 170px;
+    padding: 7px;/* 7px de 295px(div) */
+    width: 170px;/* 170px de 295px(div)*/
 }
 
 input[type^="submit"]{
-    margin: 30px 0px 20px 250px;
-    padding: 10px;
+    margin: 30px 0px 20px 250px;/* 250px(izquierda) de 400px(form) */
+    padding: 10px;/* 10px de 400px(form) */
     font-weight: bolder;
     font-style: italic;
     font-size: large;
@@ -45,15 +51,15 @@ input[type^="submit"]{
 input[type^="submit"]:hover{
     cursor: grab;
     transition: 0.5s;
-    padding: 12px;
+    padding: 12px;/* 12px de 400px(form) */
 }
 
 div:nth-of-type(1) label{
-    width: 80px;
+    width: 80px;/* 80px de 295px(div) */
 }
 div:nth-of-type(3) label{
-    width: 200px;
+    width: 200px;/* 200px de 295px(div) */
 }
 div:nth-of-type(2) label,div:nth-of-type(4) label{
-    width: 100px;
+    width: 100px;/* 100px de 295px(div) */
 }
