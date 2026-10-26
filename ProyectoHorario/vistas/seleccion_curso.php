@@ -11,9 +11,9 @@
 </head>
 <body>
     <nav>
-        <div><a>Asignaturas</a></div>
-        <div><a>Usuarios</a></div>
-        <div><a>Horario</a></div>
+        <a>Asignaturas</a>
+        <a>Usuarios</a>
+        <a>Horario</a>
     </nav>
     <h1>Selecciona el curso: </h1>
     <form action="alta_horario.php" method="POST">

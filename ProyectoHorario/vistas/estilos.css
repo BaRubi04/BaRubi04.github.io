@@ -2,22 +2,40 @@ html{
     width:1400px;
     font-size:16px;
 }
+body{
+    width:100%;
+}
 nav{
     border-radius: 10px;
     background-color: rgb(185, 208, 245);
     width: 30%;
     margin: 0 auto;
+    text-align:center;
+}
+h1,h2,h3{
+    text-align: center;
 }
 nav a{
     display:inline-block;
+    padding: 0.5%;
+    border-radius: 4px;
+    background-color: rgba(240, 248, 255, 0.534);
+    margin: 1em 5% 1em 5%;
+}
+nav a:hover{
+    cursor: grab;
+    transition: 0.5s;
+    padding: 0.7%;
 }
 form{
+    margin:auto;
     border-radius: 10px;
+    width: 40%;
     background-color: rgb(185, 208, 245);
     padding: 2%;
 }
 input[type="submit"]{
-    margin: 3em 0 0 0;
+    margin: 3em 0 0 35%;
     padding: 0.5%;
     font-weight: bolder;
     font-style: italic;
@@ -28,4 +46,13 @@ input[type="submit"]:hover{
     cursor: grab;
     transition: 0.5s;
     padding: 1%;
+}
+select{
+    margin: 0 0 1em 10%;
+}
+label{
+    margin: 0 0 1em 10%;
+}
+#textoEmpujado{
+    margin: 0 0 0.5em 25%;
 }
