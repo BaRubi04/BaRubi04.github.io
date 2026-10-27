@@ -10,7 +10,7 @@ nav{
     background-color: rgb(185, 208, 245);
     width: 30%;
     margin: 0 auto;
-    text-align:center;
+    text-align: center;
 }
 h1,h2,h3{
     text-align: center;
@@ -20,7 +20,7 @@ nav a{
     padding: 0.5%;
     border-radius: 4px;
     background-color: rgba(240, 248, 255, 0.534);
-    margin: 1em 5% 1em 5%;
+    margin: 1em 3% 1em 6%;
 }
 nav a:hover{
     cursor: grab;
@@ -35,8 +35,8 @@ form{
     padding: 2%;
 }
 input[type="submit"]{
-    margin: 3em 0 0 35%;
-    padding: 0.5%;
+    margin: 3em 0 0 30%;
+    padding: 1%;
     font-weight: bolder;
     font-style: italic;
     font-size: large;
@@ -45,7 +45,7 @@ input[type="submit"]{
 input[type="submit"]:hover{
     cursor: grab;
     transition: 0.5s;
-    padding: 1%;
+    padding: 1.5%;
 }
 select{
     margin: 0 0 1em 10%;
@@ -54,5 +54,24 @@ label{
     margin: 0 0 1em 10%;
 }
 #textoEmpujado{
-    margin: 0 0 0.5em 25%;
+    margin: 0 0 0.5em 27%;
+}
+#desplegableCursos{
+    margin:1em 0 1em 40%;
+    border-radius:10px;
+    border:0;
+    background-color:rgba(240, 248, 255, 0.534);
+    font-size: 1.5em;
+    padding:1%;
+}
+#desplegableCursos:hover{
+    transition: 0.5s;
+    cursor:grab;
+    background-color:rgb(240, 248, 255);
+    font-size: 1.6em;
+    padding:1.1%;
+}
+#desplegableCursos:focus{/* focus es el elemento que tienes seleccionado */
+    transition:0;
+    background-color:rgb(255, 255, 255);
 }

@@ -1,5 +1,6 @@
 <?php
-    
+    require '../controlador/controlador.php';
+    $objHorario = new Horario();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,10 +17,11 @@
         <a>Horario</a>
     </nav>
     <h1>Selecciona el curso: </h1>
-    <form action="alta_horario.php" method="POST">
-        <select name="curso">
-            <option value="1">1DAW</option>
-            <option value="2">2DAW</option>
+    <form action="alta_horario_lunes.php" method="POST">
+        <select id="desplegableCursos" name="curso">
+            <?php 
+                $objHorario->listadoCursos();
+            ?>
         </select><br>
         <input type="submit">
     </form>
