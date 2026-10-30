@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Rutas</title>
+</head>
+<body>
+    <header>
+        <div id="cajaHeaderIzquierda">
+            <h1>Rutas&Naturaleza</h1>
+            <p>Descubre. Explora. Disfruta.</p>
+        </div>
+        <div id="cajaHeaderDerecha">
+            <img src="imagenes/logo.png">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="web.html">Inicio</a></li>
+            <li><a href="web.html">Rutas</a></li>
+            <li><a href="web.html">Sobre Nosotros</a></li>
+            <li><a href="web.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <section id="principal">
+        <div id="imagenPrincpal">
+            <img src="imagenes/paisaje1.jpg">
+        </div>
+        <div id="bloqueTexto">
+            <h1>Tu próxima aventura te está esperando</h1>
+            <p>
+                Explora nuestras rutas de senderismo y descubre
+                paisajes únicos. Naturaleza, aire libre y 
+                experiencias inolvidables te esperan.
+            </p>
+        </div>
+    </section>
+    <section id="inferior">
+        <div id="cajitaForm">
+            <h2></h2>
+            <form>
+                <div id="cabeceraForm"><h2>Reserva tu ruta</h2></div>
+                <label for="actividad">
+                    Actividad *
+                </label>
+                <select name="actividad">
+                    <option value="senderismo">Senderismo</option>
+                    <option value="escala">Escala</option>
+                    <option value="respirar">Respirar</option>
+                </select>
+                <label for="fecha">Fecha *</label>
+                <label for="numpersonas">Nº personas *</label>
+                <input name="fecha" type="text">
+                <input name="numpersonas" type="text">
+                <br>
+                <label for="comentarios">Comentarios (opcional)</label>
+                <textarea name="comentarios">Escribe aquí tus comentarios...</textarea>
+                <input type="submit" value="Reservar">
+            </form>
+        </div>
+        <div id="bloqueSecundario">
+            <div id="cajaImagenSecundaria">
+                <img src="imagenes/paisaje2.jpg">
+            </div>
+            <div id="cajaListaVentajas">
+                <h2>¿Por qué elegimos?</h2>
+                <ul>
+                    <li>Rutas para todos los niveles</li>
+                    <li>Guías especializados</li>
+                    <li>Grupos reducidos</li>
+                    <li>Respeto por el medio ambiente</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>C 2025 Rutas&Naturaleza. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

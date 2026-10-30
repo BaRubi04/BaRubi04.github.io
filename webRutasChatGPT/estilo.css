@@ -1,0 +1,199 @@
+/* Cajas principales */
+html{
+    width: 1200px;
+}
+body{
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+header{
+    width: 1120px;
+    height: 120px;
+    padding: 20px;
+    background-color: #205A82;
+    color:white;
+}
+nav{
+    width: 1120px;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: #5AAFE0;
+    position:relative;
+}
+#principal{
+    width: 1120px;
+    height: 350px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    position:relative;
+}
+#inferior{
+    width: 1140px;
+    height: 777px;
+    padding: 15px 0 15px 20px;
+    background-color: #FFFFFF;
+    position:relative;
+}
+footer{
+    width: 1120px;
+    height: 80px;
+    padding: 20px;
+    background-color: #205A82;
+}
+
+/* Elementos header */
+#cajaHeaderIzquierda{
+    width: 300px;
+    height: 80px;
+    float:left;
+}
+#cajaHeaderDerecha{
+    width: 170px;
+    height: 80px;
+    padding: 0;
+    float:right;
+}
+/* Elementos del nav */
+nav ul{
+    position:absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{/* los botones son <a> dentro de li dentro de ul */
+    width: 120px;
+    height: 20px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 0 0 100px;
+    display:inline-block;
+    
+}
+
+/* Section principal */
+#imagenPrincpal{
+    width: 560px;
+    height: 310px;
+    padding: 0;
+    float:left;
+}
+#bloqueTexto{
+    width: 498px;
+    height: 298px;
+    padding: 5px 20px;
+    border: 1px;
+    background-color: #E5F2FC;
+    float:right;
+}
+
+/* Section inferior */
+#cajitaForm{
+    width: 428px;
+    padding: 0 20px;
+    border: 1px;
+    /*margin: 0 0 0 20px;*/
+    background-color: #FFFFFF;
+    float:left;
+}
+#bloqueSecundario{
+    width: 440px;
+    height: 717px;
+    padding: 15px;
+    /*margin: 0 0 0 20px;*/
+    background-color: transparent;
+    float:right;
+}
+
+/* Elementos del formulario */
+select[name="actividad"]{
+    width: 400px;
+    height: 58px;
+    padding: 0 10px;
+    border: 1px;
+    margin: 0 0 30px 0;
+    background-color: #FFFFFF;
+}
+input[name="fecha"][type="text"]{
+    width: 198px;
+    height: 58px;
+    padding: 0 10px;
+    border: 1px;
+    margin: 0 50px 16px 0;
+    background-color: #FFFFFF;
+}
+input[name="numpersonas"][type="text"]{
+    width: 120px;
+    height: 58px;
+    padding: 0 10px;
+    border: 1px;
+    margin: 0 0 16px 0;
+    background-color: #FFFFFF;
+}
+textArea[name="comentarios"]{
+    width: 400px;
+    height: 58px;
+    padding: 0 10px;
+    border: 1px;
+    margin: 0 0 16px 0;
+    background-color: #FFFFFF;
+}
+input[type="submit"][value="Reservar"]{
+    width: 420px;
+    height: 58px;
+    border: 1px;
+    margin: 0 0 16px 0;
+    background-color:#2D9B48;
+}
+
+/* Imagen secundaria y lista */
+#cajaImagenSecundaria{
+    width: 440px;
+    height: 411px;
+    /*margin: 25px 0 25px 0;*/
+}
+#cajaListaVentajas{
+    width: 420px;
+    height: 311px;
+    padding: 0 10px;
+    /*margin: 25px 0 25px 0;*/
+    background-color: #E8F4E9;
+}
+
+/* Elementos tipográficos */
+h1{
+    font-size: 32px;
+    font-style:bold;
+}
+h2{
+    font-size: 20px;
+    font-style:bold;
+}
+p{
+    font-size: 16px;
+    font-style: bold;
+}
+#principal p{
+    font-size: 18px;
+}
+label,form p,footer p,header p{
+    font-size: 14px;
+}
+#cajaListaVentajas li{
+    font-size: 16px;
+}
+nav ul li a{
+    background-color: transparent;
+    text-decoration:none;
+    color:white;
+}
+nav ul li:hover{
+    background-color: #07579B;
+    transition: 0.5s;
+    cursor:grab;
+}
+#cabeceraForm{
+    background-color: #DCECF9;
+}
+img{width: 100%;}
